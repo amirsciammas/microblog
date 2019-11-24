@@ -39,3 +39,4 @@ AttributeError: 'AnonymousUserMixin' object has no attribute 'verify_reset_passw
 2019-11-24 16:45:19,428 INFO: Microblog startup [in /Users/amirsciammas/PycharmProjects/microblog/app/__init__.py:48]
 2019-11-24 17:04:07,573 INFO: Microblog startup [in /Users/amirsciammas/PycharmProjects/microblog/app/__init__.py:50]
 2019-11-24 17:04:28,128 INFO: Microblog startup [in /Users/amirsciammas/PycharmProjects/microblog/app/__init__.py:50]
+2019-11-24 17:16:49,808 INFO: Microblog startup [in /Users/amirsciammas/PycharmProjects/microblog/app/__init__.py:52]
