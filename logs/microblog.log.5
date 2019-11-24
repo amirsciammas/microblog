@@ -1,4 +1,4 @@
-2019-11-24 16:35:23,008 ERROR: Exception on /login [GET] [in /Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/flask/app.py:1891]
+2019-11-23 14:36:31,111 ERROR: Exception on /index [GET] [in /Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,8 +12,10 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/amirsciammas/PycharmProjects/microblog/app/routes.py", line 54, in login
-    return render_template('login.html', title='Sign In', form=form)
+  File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/amirsciammas/PycharmProjects/microblog/app/routes.py", line 20, in index
+    return render_template('index.html', title='Home')
   File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
     ctx.app,
   File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
@@ -26,28 +28,19 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "/Users/amirsciammas/PycharmProjects/microblog/app/templates/login.html", line 1, in top-level template code
+  File "/Users/amirsciammas/PycharmProjects/microblog/app/templates/index.html", line 1, in top-level template code
     {% extends "base.html" %}
   File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1005, in render
     return concat(self.root_render_func(self.new_context(vars)))
-  File "/Users/amirsciammas/PycharmProjects/microblog/app/templates/login.html", line 14, in root
-    <p>
-  File "/Users/amirsciammas/PycharmProjects/microblog/app/templates/base.html", line 55, in root
-  File "/Users/amirsciammas/PycharmProjects/microblog/app/templates/login.html", line 49, in block_content
-  File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/jinja2/runtime.py", line 262, in call
-    return __obj(*args, **kwargs)
-  File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/flask/helpers.py", line 370, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2215, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/flask/helpers.py", line 358, in url_for
-    endpoint, values, method=method, force_external=external
-  File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/werkzeug/routing.py", line 2020, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'reset_password'. Did you forget to specify values ['token']?
-2019-11-24 16:35:24,999 ERROR: Exception on /login [GET] [in /Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/flask/app.py:1891]
+  File "/Users/amirsciammas/PycharmProjects/microblog/app/templates/index.html", line 14, in root
+    <p>{{ submit() }}</p>
+  File "/Users/amirsciammas/PycharmProjects/microblog/app/templates/base.html", line 54, in root
+  File "/Users/amirsciammas/PycharmProjects/microblog/app/templates/index.html", line 28, in block_content
+  File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2019-11-23 14:41:14,661 INFO: Microblog startup [in /Users/amirsciammas/PycharmProjects/microblog/app/__init__.py:46]
+2019-11-23 14:41:16,145 ERROR: Exception on /index [GET] [in /Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -61,8 +54,10 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/amirsciammas/PycharmProjects/microblog/app/routes.py", line 54, in login
-    return render_template('login.html', title='Sign In', form=form)
+  File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/amirsciammas/PycharmProjects/microblog/app/routes.py", line 37, in index
+    posts=posts)
   File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
     ctx.app,
   File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
@@ -75,25 +70,17 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "/Users/amirsciammas/PycharmProjects/microblog/app/templates/login.html", line 1, in top-level template code
+  File "/Users/amirsciammas/PycharmProjects/microblog/app/templates/index.html", line 1, in top-level template code
     {% extends "base.html" %}
   File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1005, in render
     return concat(self.root_render_func(self.new_context(vars)))
-  File "/Users/amirsciammas/PycharmProjects/microblog/app/templates/login.html", line 14, in root
-    <p>
-  File "/Users/amirsciammas/PycharmProjects/microblog/app/templates/base.html", line 55, in root
-  File "/Users/amirsciammas/PycharmProjects/microblog/app/templates/login.html", line 49, in block_content
+  File "/Users/amirsciammas/PycharmProjects/microblog/app/templates/index.html", line 14, in root
+    <p>{{ submit() }}</p>
+  File "/Users/amirsciammas/PycharmProjects/microblog/app/templates/base.html", line 54, in root
+  File "/Users/amirsciammas/PycharmProjects/microblog/app/templates/index.html", line 39, in block_content
   File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/jinja2/runtime.py", line 262, in call
     return __obj(*args, **kwargs)
-  File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/flask/helpers.py", line 370, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2215, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/flask/helpers.py", line 358, in url_for
-    endpoint, values, method=method, force_external=external
-  File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/werkzeug/routing.py", line 2020, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'reset_password'. Did you forget to specify values ['token']?
-2019-11-24 16:41:20,559 INFO: Microblog startup [in /Users/amirsciammas/PycharmProjects/microblog/app/__init__.py:48]
+  File "/Users/amirsciammas/PycharmProjects/microblog/venv/lib/python3.7/site-packages/jinja2/runtime.py", line 630, in _fail_with_undefined_error
+    raise self._undefined_exception(hint)
+jinja2.exceptions.UndefinedError: 'submit' is undefined
+2019-11-23 14:42:42,708 INFO: Microblog startup [in /Users/amirsciammas/PycharmProjects/microblog/app/__init__.py:46]
